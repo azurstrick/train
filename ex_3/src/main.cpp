@@ -5,10 +5,9 @@
 ** Login   <samain_c@epitech.net>
 ** 
 ** Started on  Fri Nov 18 10:44:21 2016 carl samain
-// Last update Mon Nov 28 13:55:41 2016 carl samain
+// Last update Wed Nov 30 16:28:42 2016 carl samain
 */
 
-using namespace std;
 #include <string>
 #include <iostream>
 #include "../include/koala.h"
@@ -21,7 +20,7 @@ SickKoala::SickKoala(std::string str)
 
 SickKoala::~SickKoala(void)
 {
-  std::cout << name << "KREOOOG !! Je SUIS GUERIIII !" << endl;
+  std::cout << name << "KREOOOG !! Je SUIS GUERIIII !" << std::endl;
 }
 
 void		SickKoala::overDrive(std::string str)
@@ -39,26 +38,26 @@ void		SickKoala::poke()
   std::cout << name << "AAAAAARG" << std::endl;
 }
 
-boolean		SickKoala::takeDrug(std::string str)
+bool		SickKoala::takeDrug(std::string str)
 {
   if (str.compare("Buronzand") == 0)
     {
-      std::cout << name << "Et la fatigue a fait son temps !" << endl;
+      std::cout << name << "Et la fatigue a fait son temps !" << std::endl;
       return (true);
     }
   else if (str.compare ("mars") == 0)
     {
-      std::cout << name << str.c_str() << "et ca kreog !" << endl;
+      std::cout << name << str.c_str() << "et ca kreog !" << std::endl;
       return (true);
     }
-  std::cout << name << "Goerkreog !" << endl;
+  std::cout << name << "Goerkreog !" << std::endl;
   return (false);
 }
 
 int		 main(int ac, char **av)
 {
   std::string	name = "koala";
-  SickKoala koala = new SickKoala(name);
+  SickKoala koala(name);
   koala.poke();
   return (0);
 }

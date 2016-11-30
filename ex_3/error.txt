@@ -1,0 +1,34 @@
+src/../include/koala.h:21:13: error: expected class-name before ‘(’ token
+   ~SickKoaka();
+             ^
+src/main.cpp:22:27: error: definition of implicitly-declared ‘SickKoala::~SickKoala()’
+ SickKoala::~SickKoala(void)
+                           ^
+src/main.cpp:37:7: error: prototype for ‘void SickKoala::poke()’ does not match any in 
+class ‘SickKoala’
+ void  SickKoala::poke()
+       ^
+In file included from src/main.cpp:14:0:
+src/../include/koala.h:22:9: error: candidate is: void SickKoala::poke(std::string)
+   void  poke(std::string str);
+         ^
+src/main.cpp:42:1: error: ‘boolean’ does not name a type
+ boolean  SickKoala::takeDrug(std::string str)
+ ^
+src/main.cpp: In function ‘int main(int, char**)’:
+src/main.cpp:61:39: error: conversion from ‘SickKoala*’ to non-scalar type ‘SickKoala’ 
+requested
+   SickKoala koala = new SickKoala(name);
+                                       ^
+src/main.cpp:62:14: error: no matching function for call to ‘SickKoala::poke()’
+   koala.poke();
+              ^
+src/main.cpp:62:14: note: candidate is:
+In file included from src/main.cpp:14:0:
+src/../include/koala.h:22:9: note: void SickKoala::poke(std::string)
+   void  poke(std::string str);
+         ^
+src/../include/koala.h:22:9: note:   candidate expects 1 argument, 0 provided
+<builtin>: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+

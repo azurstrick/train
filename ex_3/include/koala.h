@@ -5,7 +5,7 @@
 ** Login   <samain_c@epitech.net>
 ** 
 ** Started on  Fri Nov 18 10:58:17 2016 carl samain
-** Last update Mon Nov 28 14:02:05 2016 carl samain
+** Last update Wed Nov 30 16:23:48 2016 carl samain
 */
 
 #ifndef KOALA_H_
@@ -18,8 +18,8 @@ class SickKoala
 {
  public:
   SickKoala(std::string str);
-  ~SickKoaka();
-  void		poke(std::string str);
+  ~SickKoala();
+  void		poke();
   bool		takeDrug(std::string str);
   void		overDrive(std::string str);
 
